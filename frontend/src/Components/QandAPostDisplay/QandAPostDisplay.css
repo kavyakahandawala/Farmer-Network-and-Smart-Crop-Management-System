@@ -1,0 +1,214 @@
+.qanda-page {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f9f8;
+  color: #333;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Banner */
+.qanda-page .banner-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.qanda-page .banner-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  filter: brightness(0.6);
+  z-index: 1;
+}
+
+.qanda-page .banner-slider img.active {
+  opacity: 1;
+}
+
+.qanda-page .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+.qanda-page .banner-text h1 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.qanda-page .banner-text p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.qanda-page .banner-text button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #179524;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.qanda-page .banner-text button:hover {
+  background: #25e041;
+  transform: scale(1.05);
+}
+
+/* Posts Container */
+.qanda-page .posts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .qanda-page .posts-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Post Card */
+.qanda-page .post-card {
+  position: relative;
+  background: linear-gradient(145deg, #81d0a6, #52b17a, #1b5e20);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  border: none;
+}
+
+.qanda-page .post-card:hover {
+  background: linear-gradient(145deg, #85c995, #4caf50, #0d3d16);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.qanda-page .post-card h3 {
+  font-size: 22px;
+  color: #19643d;
+  margin-top: 0;
+}
+
+.qanda-page .post-card p {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.qanda-page .post-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* Actions */
+.qanda-page .post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.qanda-page .update-icon,
+.qanda-page .delete-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.qanda-page .update-icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+.qanda-page .delete-icon:hover {
+  color: #dc3545;
+  transform: scale(1.2);
+}
+
+/* Replies */
+.qanda-page .replies-section {
+  margin-top: 15px;
+}
+
+.qanda-page .reply-card {
+  background: #f1f8f7;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.qanda-page .reply-author {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Reply Form */
+.qanda-page .reply-form {
+  margin-top: 15px;
+}
+
+.qanda-page .reply-form input,
+.qanda-page .reply-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #26a69a;
+  border-radius: 8px;
+  outline: none;
+}
+
+.qanda-page .reply-form input:focus,
+.qanda-page .reply-form textarea:focus {
+  border-color: #26a69a;
+  box-shadow: 0 0 5px rgba(38, 166, 154, 0.3);
+}
+
+.qanda-page .reply-form button {
+  padding: 10px;
+  background: #26a69a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.qanda-page .reply-form button:hover {
+  background: #009688;
+  transform: scale(1.05);
+}
+
+.qanda-page .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+  display: block;
+}
+
+.qanda-page .border-error {
+  border: 1px solid red !important;
+}

@@ -1,0 +1,231 @@
+.admin-post-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.admin-post-sidebar {
+  width: 80px;
+  background: linear-gradient(180deg, #2e7d32, #1b5e20);
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.admin-post-sidebar:hover {
+  width: 220px;
+}
+
+.admin-post-sidebar img {
+  width: 60px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.admin-post-sidebar:hover img {
+  transform: scale(1.1);
+}
+
+.admin-post-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.admin-post-menu li {
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.admin-post-menu li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.admin-post-menu li.admin-post-active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-post-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.admin-posts-container {
+  flex-grow: 1;
+  padding: 30px;
+  background: #f9fff9;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+}
+
+.admin-post-title {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Filter Buttons */
+.admin-post-filter-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-post-filter-btn {
+  background-color: #a5d6a7;
+  color: #2e7d32;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.admin-post-filter-btn.admin-post-filter-active,
+.admin-post-filter-btn:hover {
+  background-color: #43a047;
+  color: white;
+}
+
+.admin-post-pdf-btn {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.admin-post-pdf-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Table */
+.admin-posts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-posts-table th,
+.admin-posts-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-posts-table th {
+  background: #81c784;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.admin-posts-table tr:nth-child(even) {
+  background: #f1f8f4;
+}
+
+.admin-posts-table tr:hover {
+  background: #e8f5e9;
+}
+
+/* Image */
+.admin-post-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.admin-post-img:hover {
+  transform: scale(1.1);
+}
+
+/* Replies */
+.admin-post-reply-item {
+  background: #f9fff9;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 4px 0;
+  text-align: left;
+  font-size: 13px;
+  border-left: 4px solid #66bb6a;
+}
+
+/* Empty state */
+.admin-post-empty {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Modal */
+.admin-post-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.admin-post-image-modal-content img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-post-sidebar {
+    width: 60px;
+  }
+
+  .admin-post-sidebar:hover {
+    width: 180px;
+  }
+
+  .admin-posts-container {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .admin-posts-table th,
+  .admin-posts-table td {
+    font-size: 12px;
+  }
+}

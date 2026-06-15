@@ -1,0 +1,337 @@
+/* =============================
+   Banner
+============================= */
+.billing-banner {
+    width: 100%;
+    min-width: 100%;
+    background: url('/public/images/cropinput3.jpeg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.billing-banner::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(46,125,50,0.7);
+}
+
+.billing-banner h1, .billing-banner .subtitle {
+    position: relative;
+    z-index: 2;
+}
+
+.billing-banner h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: slideDown 1s ease-out;
+}
+
+.billing-banner .subtitle {
+    font-size: 1.1rem;
+    margin-top: .5rem;
+    opacity: 0.9;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* =============================
+   Billing Page Layout
+============================= */
+.billing-page {
+  background-color: #F5F5DC; /* Beige */
+  color: #757575;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* Header */
+.billing-page header {
+  background-color: #2E7D32; /* Primary green */
+  color: #FFFFFF;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.billing-page header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.billing-page header .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+/* Container */
+.billing-page .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.billing-page button {
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.billing-page button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.4s;
+}
+
+.billing-page button:hover::before {
+  left: 100%;
+}
+
+.billing-page button.bg-primary {
+  background: linear-gradient(135deg, #0288D1 0%, #4FC3F7 100%);
+  color: #FFFFFF;
+}
+
+.billing-page button.bg-primary:hover {
+  background: linear-gradient(135deg, #4FC3F7 0%, #81D4FA 100%);
+  transform: translateY(-2px);
+}
+
+.billing-page button.bg-success {
+  background: linear-gradient(135deg, #388E3C 0%, #81C784 100%);
+  color: #FFFFFF;
+}
+
+.billing-page button.bg-success:hover {
+  background: linear-gradient(135deg, #81C784 0%, #A5D6A7 100%);
+  transform: translateY(-2px);
+}
+
+.billing-page button:disabled {
+  background: #D3D3D3;
+  color: #757575;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* =============================
+   Form Styling
+============================= */
+/* Glass card effect with medium size */
+.billing-page .form {
+  max-width: 36rem; /* medium size */
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.8rem; /* balanced padding */
+  border-radius: 0.75rem;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.billing-page .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.billing-page .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.billing-page .form-group.full-width {
+  grid-column: span 2;
+}
+
+.billing-page input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #757575;
+  border-radius: 0.5rem;
+  background-color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.billing-page input:hover {
+  border-color: #F9A825;
+  transform: scale(1.02);
+}
+
+.billing-page input:focus {
+  outline: none;
+  border-color: #F9A825;
+  box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.2);
+}
+
+.billing-page input.border-error {
+  border-color: #A94438;
+}
+
+/* Text styles */
+.billing-page .text-error {
+  color: #A94438;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.billing-page .text-success {
+  color: #66BB6A;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.billing-page .text-loading {
+  color: #0288D1;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Error messages */
+.billing-page .error-message {
+  color: #A94438;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Loading spinner */
+.billing-page .loading-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid #0288D1;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Form headings and labels */
+.billing-page h2 {
+  color: #757575;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.billing-page label {
+  color: #757575;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* =============================
+   Animations
+============================= */
+@keyframes slideDown { from { transform: translateY(-40px); opacity:0; } to { transform: translateY(0); opacity:1; } }
+@keyframes slideUp { to { transform: translateY(0); opacity:1; } }
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* =============================
+   Responsive Design
+============================= */
+@media (max-width: 768px) {
+  .billing-page .form {
+    max-width: 28rem;
+    padding: 1.5rem;
+  }
+
+  .billing-page .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-page .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .billing-page input {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .billing-page h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .billing-page .form {
+    max-width: 22rem;
+    padding: 1.25rem;
+  }
+
+  .billing-page h2 {
+    font-size: 1.25rem;
+  }
+
+  .billing-page input {
+    padding: 0.6rem;
+    font-size: 0.875rem;
+  }
+}

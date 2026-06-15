@@ -1,0 +1,321 @@
+/* Root variables for the specified color palette */
+:root {
+  --primary-green: #2E7D32;
+  --light-green: #66BB6A;
+  --brown: #8D6E63;
+  --beige: #F5F5DC;
+  --yellow: #F9A825;
+  --orange: #FB8C00;
+  --light-blue: #42A5F5;
+  --dark-blue: #1565C0;
+  --white: #FFFFFF;
+  --gray: #757575;
+  --red: #D32F2F; /* Red shade for delete button */
+}
+
+/* General page styling */
+body {
+  margin-top: 90px;
+  font-family: 'Georgia', serif;
+  background-color: var(--beige);
+  color: var(--black);
+}
+
+/* Header styling */
+.product-header {
+  background-color: var(--primary-green);
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Container styling */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Place buttons on opposite sides */
+  align-items: center; /* Ensure buttons are vertically aligned */
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Back button styling */
+.back-button {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-button:hover {
+  background-color: #1B5E20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.back-button::before {
+  content: '🏠';
+  font-size: 1.1rem;
+}
+
+.add-product-button {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.add-product-button:hover {
+  background-color: var(--dark-blue);
+  transform: translateY(-2px);
+}
+
+/* Error message */
+.error-message {
+  color: var(--red);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Table container */
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+/* Product table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+
+.product-table th,
+.product-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+.product-table th {
+  background-color: var(--light-green);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Image styling */
+.product-table-image {
+  width: 80px; /* Smaller image size */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--light-green);
+}
+
+/* Text styling for long content */
+.product-table td {
+  max-width: 200px; /* Limit column width to prevent overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.product-table td:hover {
+  white-space: normal; /* Allow text to wrap on hover for readability */
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Specific column adjustments */
+.product-table td:nth-child(2) { /* Product Name */
+  max-width: 250px; /* Slightly wider for long product names */
+}
+
+.product-table td:nth-child(6) { /* Description */
+  max-width: 300px; /* Wider for descriptions */
+}
+
+/* Action buttons */
+.edit-button,
+.delete-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 0.5rem;
+}
+
+.edit-button {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+.edit-button:hover {
+  background-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.delete-button:hover {
+  background-color: #B71C1C; 
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .product-table {
+    font-size: 0.9rem;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 0.75rem;
+  }
+
+  .product-table-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-table td {
+    max-width: 150px; 
+  }
+
+  .product-table td:nth-child(2) {
+    max-width: 200px;
+  }
+
+  .product-table td:nth-child(6) {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .back-button,
+  .add-product-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .product-table {
+    font-size: 0.85rem;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 0.5rem;
+  }
+
+  .product-table-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .product-table td {
+    max-width: 100px;
+  }
+
+  .product-table td:nth-child(2) {
+    max-width: 150px;
+  }
+
+  .product-table td:nth-child(6) {
+    max-width: 200px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-table {
+    font-size: 0.8rem;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 0.4rem;
+  }
+
+  .product-table-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .product-table td {
+    max-width: 80px;
+  }
+
+  .product-table td:nth-child(2) {
+    max-width: 120px;
+  }
+
+  .product-table td:nth-child(6) {
+    max-width: 150px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .product-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem 0.5rem;
+  }
+}

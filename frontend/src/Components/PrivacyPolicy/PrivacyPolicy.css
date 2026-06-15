@@ -1,0 +1,440 @@
+.privacy-policy-wrapper {
+  position: relative;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+  min-height: 100vh;
+}
+
+.banner-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+  filter: brightness(0.9);
+  transition: opacity 0.3s ease;
+}
+
+.banner-image:hover {
+  opacity: 1;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+}
+
+.banner-overlay h1 {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(46, 125, 50, 0.7); /* Green semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.privacy-policy-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  position: relative;
+  z-index: 2;
+}
+
+.last-updated {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.privacy-policy-container h2 {
+  color: #2e7d32;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #4caf50;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.privacy-policy-container h3 {
+  color: #388e3c;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.privacy-policy-container ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.privacy-policy-container li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 15px 12px 35px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.privacy-policy-container li:before {
+  content: "🌱";
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 1.2rem;
+}
+
+.privacy-policy-container p {
+  margin-bottom: 15px;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.privacy-policy-container section {
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.policy-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.policy-nav button {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.policy-nav button:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #4caf50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-left: 5px solid #4caf50;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.contact-info p:last-child {
+  border-bottom: none;
+}
+
+.contact-button {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-button:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #4caf50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(76, 175, 80, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content h3 {
+  margin-bottom: 25px;
+  color: #2e7d32;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 3px solid #4caf50;
+  padding-bottom: 15px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-content input,
+.modal-content textarea {
+  margin-top: 8px;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  background: white;
+}
+
+.modal-content textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.modal-content button {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #4caf50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.form-status {
+  margin-top: 15px;
+  color: #2e7d32;
+  text-align: center;
+  font-weight: 600;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Scrollbar Styling */
+.privacy-policy-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.privacy-policy-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.privacy-policy-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  border-radius: 4px;
+}
+
+.privacy-policy-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #4caf50 100%);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 150px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2rem;
+    padding: 8px 15px;
+  }
+
+  .privacy-policy-container {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .privacy-policy-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .policy-nav {
+    padding: 15px;
+    gap: 8px;
+  }
+
+  .policy-nav button {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .privacy-policy-container section {
+    padding: 20px 15px;
+  }
+
+  .privacy-policy-container li {
+    padding: 10px 12px 10px 30px;
+  }
+
+  .privacy-policy-container p {
+    padding: 12px;
+  }
+
+  .contact-info {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 120px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.8rem;
+    padding: 6px 12px;
+  }
+
+  .privacy-policy-container {
+    padding: 15px 10px;
+  }
+
+  .policy-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .policy-nav button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .privacy-policy-container section {
+    padding: 15px 10px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+}

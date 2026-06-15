@@ -1,0 +1,200 @@
+.admin-qa-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.admin-qa-layout {
+  display: flex;
+  flex: 1;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Sidebar - Scoped */
+.admin-qa-sidebar {
+  width: 80px;
+  background: linear-gradient(180deg, #2e7d32, #1b5e20);
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.admin-qa-sidebar:hover {
+  width: 220px;
+}
+
+.admin-qa-sidebar img {
+  width: 60px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.admin-qa-sidebar:hover img {
+  transform: scale(1.1);
+}
+
+.admin-qa-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.admin-qa-menu li {
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.admin-qa-menu li:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.admin-qa-menu li.admin-qa-active {
+  background: rgba(255,255,255,0.2);
+}
+
+.admin-qa-menu a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.admin-qa-menu i, .admin-qa-menu svg {
+  font-size: 18px;
+}
+
+/* Main Content - Scoped */
+.admin-qa-container {
+  flex-grow: 1;
+  padding: 30px;
+  background: #f9fff9; 
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-qa-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.admin-qa-create-btn {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.admin-qa-create-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Table Styling - Scoped */
+.admin-qa-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-qa-table th, .admin-qa-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-qa-table th {
+  background: #81c784;
+  color: white;
+  font-weight: 600;
+}
+
+.admin-qa-table tr:nth-child(even) {
+  background: #f1f8f4;
+}
+
+.admin-qa-table tr:hover {
+  background: #e8f5e9;
+}
+
+.admin-qa-table td:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-qa-action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-qa-update-btn {
+  background-color: #43a047;
+  color: white;
+}
+
+.admin-qa-update-btn:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.admin-qa-delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.admin-qa-delete-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-qa-sidebar {
+    width: 60px;
+  }
+  .admin-qa-sidebar:hover {
+    width: 180px;
+  }
+  .admin-qa-title {
+    font-size: 1.6rem;
+  }
+  .admin-qa-container {
+    margin: 10px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,72 @@
+/* AdminMarketWM.css */
+
+.admin-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f6fff6; /* soft green background */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 100, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: #2e7d32; /* dark green */
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.admin-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.admin-container label {
+  font-weight: 600;
+  color: #1b5e20; /* deep green */
+  margin-bottom: 6px;
+}
+
+.admin-container input,
+.admin-container select {
+  padding: 12px;
+  border: 1.5px solid #81c784; /* light green border */
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.admin-container input:focus,
+.admin-container select:focus {
+  border-color: #388e3c;
+  box-shadow: 0 0 6px rgba(56, 142, 60, 0.3);
+}
+
+.admin-container button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #388e3c, #2e7d32);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-container button:hover {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}

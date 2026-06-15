@@ -1,0 +1,27 @@
+.add-land-btn {
+  background-color: #4caf50 !important;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-land-btn:disabled {
+  background-color: #a5d6a7 !important;
+  cursor: not-allowed;
+}
+
+.gps-btn {
+  background-color: #43a047;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}

@@ -1,0 +1,196 @@
+/* =============================
+   Scoped Q&A Post Page Styles
+   ============================= */
+.qanda-post-page {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main layout */
+.qanda-post-page .main_content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Container */
+.qanda-post-page .post_container {
+  display: flex;
+  width: 75%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.qanda-post-page .post_container:hover {
+  transform: translateY(-5px);
+}
+
+/* Left image section */
+.qanda-post-page .post_image {
+  width: 50%;
+}
+.qanda-post-page .post_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 0 0 25px;
+}
+
+/* Right form section */
+.qanda-post-page .post_form {
+  width: 50%;
+  padding: 40px;
+  background: linear-gradient(160deg, #0f4c3a, #156f5b, #1e8d74);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f1f1f1;
+}
+.qanda-post-page .post_form h2 {
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form labels & inputs */
+.qanda-post-page .post_form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #d9f9e6;
+}
+.qanda-post-page .post_form input,
+.qanda-post-page .post_form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #34a4a6;
+  border-radius: 12px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: border 0.3s, box-shadow 0.3s, background 0.3s;
+  box-sizing: border-box;
+}
+.qanda-post-page .post_form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.qanda-post-page .post_form input::placeholder,
+.qanda-post-page .post_form textarea::placeholder {
+  color: #cfeee6;
+}
+.qanda-post-page .post_form input:focus,
+.qanda-post-page .post_form textarea:focus {
+  border-color: #4ade80;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+.qanda-post-page .post_form button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  width: fit-content;
+  align-self: flex-start;
+}
+.qanda-post-page .post_form button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669, #065f46);
+  transform: scale(1.05);
+}
+.qanda-post-page .post_form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error messages */
+.qanda-post-page .post_form .error {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 4px 0 10px 0 !important;
+  color: #e53e3e !important;
+  font-size: 0.875rem !important;
+  display: block !important;
+  text-align: left !important;
+  border-radius: 0 !important;
+}
+
+/* Red borders for invalid inputs */
+.qanda-post-page .post_form input.border-error,
+.qanda-post-page .post_form textarea.border-error {
+  border-color: #e53e3e !important;
+  background: rgba(229, 62, 62, 0.1) !important;
+}
+
+/* Character counter */
+.qanda-post-page .char-counter {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #cfeee6;
+  margin-bottom: 0.5rem;
+}
+
+/* ✅ Circular image preview */
+.qanda-post-page .image-preview {
+  margin-top: 15px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.qanda-post-page .image-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.qanda-post-page .image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .qanda-post-page .post_container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .qanda-post-page .post_image {
+    width: 100%;
+    height: 250px;
+  }
+  .qanda-post-page .post_form {
+    width: 100%;
+    padding: 30px;
+  }
+  .qanda-post-page .image-preview {
+    width: 150px;
+    height: 150px;
+  }
+}

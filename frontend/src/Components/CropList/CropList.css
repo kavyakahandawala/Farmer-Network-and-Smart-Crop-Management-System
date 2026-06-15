@@ -1,0 +1,184 @@
+/* Page wrapper for scoped background and font */
+.crop-list-page {
+    font-family: 'Arial', sans-serif;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.301)),
+        url('u7.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+/* Wrapper */
+.crop-list-container {
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-left: 50px;
+}
+
+/* Titles */
+.crop-title {
+    font-family:'Lucida';
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom:0cap
+}
+
+.crop-subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #cbd394, #6f8817, #347c07, #01180d);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Search and Filter Container */
+.search-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 40px;
+}
+
+/* Search bar */
+.search-bar-container {
+    max-width: 300px;
+}
+
+.search-bar-container:hover {
+    transform: scale(1.1);
+}
+
+.search-input {
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #fff;
+    color: #127c3a;
+    font-size: 0.9rem;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+/* Filter button */
+.filter-btn-container {
+    text-align: center;
+}
+
+.filter-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #396e3b;
+    transform: scale(1.1)
+}
+
+/* Table */
+.crop-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.164);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.crop-table th,
+.crop-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.crop-table th {
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.crop-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Actions (Edit/Delete) */
+.actions button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.actions .edit-btn {
+    color: #00e676;
+}
+
+.actions .delete-btn {
+    color: #ff1744;
+}
+
+.actions button:hover {
+    transform: scale(1.1);
+}
+
+/* Hide items only in print/PDF */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+.crop-table tbody tr {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger the animation for each row */
+.crop-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.crop-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.crop-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.crop-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.crop-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+.crop-table tbody tr:nth-child(6) { animation-delay: 0.6s; }
+.crop-table tbody tr:nth-child(7) { animation-delay: 0.7s; }
+.crop-table tbody tr:nth-child(8) { animation-delay: 0.8s; }
+.crop-table tbody tr:nth-child(9) { animation-delay: 0.9s; }
+.crop-table tbody tr:nth-child(10) { animation-delay: 1.0s; }
+.crop-table tbody tr:nth-child(11) { animation-delay: 1.1s; }
+.crop-table tbody tr:nth-child(12) { animation-delay: 1.2s; }
+.crop-table tbody tr:nth-child(13) { animation-delay: 1.3s; }
+.crop-table tbody tr:nth-child(14) { animation-delay: 1.4s; }
+.crop-table tbody tr:nth-child(15) { animation-delay: 1.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

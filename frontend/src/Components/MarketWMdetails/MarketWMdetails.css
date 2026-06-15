@@ -1,0 +1,281 @@
+/* adminDashboard.css */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #2e7d32, #388e3c);
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000; /* Ensure sidebar stays above content */
+}
+
+.sidebar img {
+  width: 120px;
+  margin: 0 auto 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.menu li {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.menu li a svg {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #fff;
+  padding-left: 16px;
+}
+
+@media print {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Filter container styling */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #e0e0e0;
+}
+
+.search-input,
+.filter-input,
+.filter-select {
+  padding: 10px;
+  border: 2px solid #81c784;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9fff9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus,
+.filter-input:focus,
+.filter-select:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 6px rgba(67, 160, 71, 0.3);
+  outline: none;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.filter-input,
+.filter-select {
+  min-width: 180px;
+}
+
+/* Main content container */
+.market-container {
+  flex-grow: 1;
+  padding: 35px;
+  background: #f9fff9;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  margin-left: 260px; /* Offset to account for 250px sidebar + 10px margin */
+}
+
+/* Center the Market Entry title */
+.market-entry-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style for the Add Price button */
+.add-price-btn {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-price-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Style for the Print Report button */
+.print-btn {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Style for the Reset Filters button */
+.reset-btn {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Table container styling */
+.market-table-container {
+  width: 100%;
+  margin: 25px 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Table styling */
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.market-table th,
+.market-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.market-table th {
+  background: #81c784;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.market-table td {
+  background: #fff;
+}
+
+.market-table tr:nth-child(even) {
+  background: #f1f8f4;
+}
+
+.market-table tr:hover {
+  background: #e8f5e9;
+}
+
+/* Center-align the Price per Kg column */
+.price-column {
+  text-align: center;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.update-btn {
+  background-color: #43a047;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide print button, add price button, and actions when printing */
+@media print {
+  .print-btn,
+  .add-price-btn,
+  .no-print,
+  .action-buttons {
+    display: none;
+  }
+}
+
+/* Chart container styling */
+.chart-container {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}

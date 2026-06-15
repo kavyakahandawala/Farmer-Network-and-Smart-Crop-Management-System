@@ -1,0 +1,68 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\definecolor{agrogreen}{RGB}{46,125,50}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{datetime}
+\newdateformat{mydate}{\THEDAY~\monthname[\THEMONTH] \THEYEAR}
+
+\begin{document}
+
+% Defining header
+\begin{center}
+  \textbf{\LARGE AgroSphere} \vspace{0.2cm} \
+  \normalsize agrosphere@gmail.com \vspace{0.1cm} \
+  AgroSphere, Colombo Rd, Kurunegala \vspace{0.1cm} \
+  \textit{21 Oct 2025, 21:24}
+\end{center}
+\vspace{0.2cm}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.5cm}
+
+% Defining title
+\begin{center}
+  \textbf{\large Invoice}
+\end{center}
+\vspace{0.3cm}
+
+% Billing Information
+\noindent
+\textbf{Billing Information:} \vspace{0.1cm} \
+Name: Reeza Nazar \vspace{0.05cm} \
+Email: mohamednabeelthalif@gmail.com \vspace{0.05cm} \
+Contact: 0752679372 \vspace{0.05cm} \
+Address: No 35, Hillwood Road, Kandy, Sri Lanka \vspace{0.3cm}
+
+% Order Details
+\noindent
+\textbf{Order Details:} \vspace{0.1cm} \
+Invoice ID: 68f7aa5ff49421317a447f7f \vspace{0.05cm} \
+Order ID: order\textbackslash_1761061471177 \vspace{0.05cm} \
+Payment Method: slip \vspace{0.05cm} \
+Total Amount: Rs 5400.00 \vspace{0.3cm}
+
+% Items Table
+\noindent
+\textbf{Items:} \vspace{0.1cm} \
+\begin{tabular}{|p{8cm}|c|p{3cm}|}
+  \hline
+  \rowcolor{agrogreen}
+  \color{white} \textbf{Product} & \color{white} \textbf{Quantity} & \color{white} \textbf{Price} \vspace{0.05cm} \hline
+  Red Lady Papaya Seeds - 100g & 1 & Rs 4200.00 \\ \hline
+Mung Bean Seeds (Green Gram) - 1kg & 1 & Rs 1200.00 \\ \hline
+\end{tabular}
+\vspace{0.5cm}
+
+% Footer
+\vfill
+\noindent
+\begin{center}
+  \small Thank you for shopping with AgroSphere!
+\end{center}
+
+\end{document}

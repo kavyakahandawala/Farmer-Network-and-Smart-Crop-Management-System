@@ -1,0 +1,141 @@
+/* ✅ Same design as AddCrop, adjusted for Update mode */
+.update-crop-page-wrapper {
+  /* Background - FIXED HEIGHT */
+  .create-crop-page {
+    background: url("u4.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+  }
+
+  /* Title + subtitle */
+  .title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    color: #000;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+
+  /* Form container */
+  .form-container {
+    background: rgba(114, 110, 110, 0.5);
+    padding: 25px;
+    border-radius: 12px;
+    width: 900px;
+    max-width: 95%;
+    color: #fff;
+    box-shadow: 0px 6px 18px rgba(5, 34, 21, 0.4);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .crop-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Field styles */
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .form-row label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .form-row input,
+  .form-row select {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  /* Update button (green hover replaced with blue to differentiate) */
+  .create-btn {
+    background: #000;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 350px;
+    align-self: center;
+  }
+
+  .create-btn:hover {
+    background: #2196F3; /* Blue hover for update mode */
+  }
+
+  /* Disabled button state */
+  .create-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+  }
+
+  /* Focus states */
+  .form-row input:focus,
+  .form-row select:focus {
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.8);
+    border: 1px solid #2196F3;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .create-crop-page {
+      padding: 20px 15px;
+    }
+
+    .form-container {
+      padding: 20px;
+      width: 95%;
+    }
+
+    .create-btn {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+}

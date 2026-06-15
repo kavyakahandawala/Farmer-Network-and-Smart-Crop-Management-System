@@ -1,0 +1,186 @@
+/* Global resets for a clean and modern look */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main page container with a gradient background */
+.add-product-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); /* Soft green gradient */
+  color: #1a3c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header with a vibrant green and subtle shadow */
+.add-product-header {
+  background: linear-gradient(90deg, #2e7d32, #4caf50); /* Gradient green header */
+  color: #ffffff;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header title with elegant typography */
+.add-product-title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Form container with a clean, centered card layout */
+.add-product-container {
+  max-width: 36rem;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+/* Error message with a vibrant alert style */
+.form-error {
+  color: #d81b60; /* Bright pink for errors */
+  background-color: #ffebee;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Form with a modern card design */
+.add-product-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-product-form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Form group spacing */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Labels with a natural brown tone */
+.form-label {
+  display: block;
+  color: #5d4037; /* Warm brown */
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Input, select, and textarea styles with smooth transitions */
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #c5e1a5; /* Light green border */
+  border-radius: 0.5rem;
+  background-color: #f9fbe7; /* Pale lime background */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #4caf50; /* Vibrant green on focus */
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* Custom select dropdown with a sleek arrow */
+.form-select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%234caf50%22%20d%3D%22M5.293%207.293a1%201%200%200%201%201.414%200L10%2010.586l3.293-3.293a1%201%200%201%201%201.414%201.414l-4%204a1%201%200%200%201-1.414%200l-4-4a1%201%200%200%201%200-1.414z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 1rem auto;
+}
+
+/* Textarea with vertical resize */
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Image preview with a circular frame */
+.image-preview {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #c5e1a5;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* File input with a modern look */
+.form-file-input {
+  width: 100%;
+  padding: 0.75rem;
+  color: #5d4037;
+  background-color: #f9fbe7;
+  border: 2px solid #c5e1a5;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Submit button with a lively green and hover animation */
+.form-button {
+  background: linear-gradient(90deg, #4caf50, #66bb6a); /* Gradient green button */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.form-button:hover {
+  background: linear-gradient(90deg, #66bb6a, #81c784);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .add-product-container {
+    padding: 1rem;
+  }
+
+  .add-product-form {
+    padding: 1.5rem;
+  }
+
+  .add-product-title {
+    font-size: 1.5rem;
+  }
+
+  .image-preview {
+    width: 8rem;
+    height: 8rem;
+  }
+}

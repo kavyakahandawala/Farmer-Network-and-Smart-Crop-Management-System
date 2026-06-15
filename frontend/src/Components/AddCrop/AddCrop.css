@@ -1,0 +1,168 @@
+/* ✅ ALTERNATIVE: No scrolling version */
+.add-crop-page-wrapper {
+  /* Background - FIXED HEIGHT */
+  .create-crop-page {
+    background: url("u4.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+  }
+
+  /* Title + subtitle */
+  .title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.2rem; /* Smaller title */
+    font-weight: 800;
+    text-align: center;
+    color: #000;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    margin-top: 6px;
+    margin-bottom: 20px; /* Reduced margin */
+  }
+
+  /* Form container - COMPACT */
+  .form-container {
+    background: rgba(114, 110, 110, 0.5);
+    padding: 25px; /* Reduced padding */
+    border-radius: 12px;
+    width: 900px;
+    max-width: 95%;
+    color: #fff;
+    box-shadow: 0px 6px 18px rgba(5, 34, 21, 0.4);
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Space before footer */
+  }
+
+  .crop-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Reduced gap */
+  }
+
+  /* Vertical fields - COMPACT */
+  .form-row.vertical-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Reduced gap */
+    width: 100%;
+  }
+
+  .form-row.vertical-field label {
+    font-weight: bold;
+    font-size: 0.9rem; /* Smaller font */
+    text-align: left;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .form-row.vertical-field input,
+  .form-row.vertical-field select {
+    padding: 8px; /* Reduced padding */
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 0.9rem; /* Smaller font */
+    outline: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Horizontal fields - COMPACT */
+  .form-row.horizontal-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px; /* Reduced gap */
+    align-items: start;
+  }
+
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Reduced gap */
+  }
+
+  .field-group label {
+    font-weight: bold;
+    font-size: 0.9rem; /* Smaller font */
+    text-align: left;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .field-group select {
+    padding: 8px; /* Reduced padding */
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 0.9rem; /* Smaller font */
+    outline: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Button */
+  .create-btn {
+    margin-top: 10px; /* Reduced margin */
+    background: #000;
+    color: #fff;
+    font-size: 1rem; /* Smaller font */
+    padding: 10px 20px; /* Reduced padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 350px; /* Smaller width */
+    align-self: center;
+  }
+
+  .create-btn:hover {
+    background: #4CAF50;
+  }
+
+  /* Focus states */
+  .form-row input:focus,
+  .form-row select:focus,
+  .field-group select:focus {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
+    border: 1px solid #4CAF50;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .create-crop-page {
+      padding: 20px 15px;
+    }
+
+    .form-container {
+      padding: 20px;
+      width: 95%;
+    }
+
+    .form-row.horizontal-fields {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .create-btn {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+}

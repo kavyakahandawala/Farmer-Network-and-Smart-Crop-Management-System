@@ -1,0 +1,65 @@
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 25px;
+    background: burlywood;
+}
+
+.container form {
+    width: 700px;
+    padding: 20px;
+    background: white;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col {
+    flex: 1 1 250px;
+}
+
+.col .title {
+    font-size: 20px;
+    color: chocolate;
+    padding-bottom: 5px;
+}
+
+.col .inputBox {
+    margin: 15px 0;
+}
+
+.col .inputBox label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.col .inputBox input, .col .inputBox select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.col .inputBox input :focus , .col .inputBox select :focus {
+    border: 1px solid #000;
+}
+
+.col .flex {
+    display: flex;
+    gap: 15px;
+}

@@ -1,0 +1,52 @@
+/* Sidebar container */
+.cropList-ul {
+  position: fixed;
+  top: 110px;        /* leave some space from the top */
+  bottom: 110px;     /* leave some space from the bottom */
+  left: 0;
+  width: 70px;
+  background: #5e5a5a38;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Each item (icon) */
+.cropList-ll {
+  margin: 20px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Icon styling */
+.nav-icon {
+  font-size: 28px;
+  color: white;
+}
+
+/* Hover effect */
+.cropList-ll:hover .nav-icon {
+  color: #4CAF50;  /* green hover */
+  transform: scale(1.2);
+}
+
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.red-dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+

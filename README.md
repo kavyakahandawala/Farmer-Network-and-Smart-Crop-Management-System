@@ -100,4 +100,4 @@ This project is developed **strictly for academic and educational purposes only*
 
 ---
 
-🌱 *Empowering agriculture through smart technology.*
+🌱 Smart Farming for a Sustainable Future
